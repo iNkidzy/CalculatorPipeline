@@ -15,8 +15,7 @@ namespace Services
             }
             else
             {
-                for(double i =0; i< numbers.Length; i++)
-                {
+                for(double i =0; i< numbers.Length; i++) {
                     Console.Write(numbers[i] + " ")
                     total += numbers[i]
                 }
@@ -31,7 +30,25 @@ namespace Services
 
         public double Multiply(params double[] numbers)
         {
-            throw new NotImplementedException();
+           variable = 2;
+           if(numbers.Length = 0)
+           {
+                Console.WriteLine("Numbers is empty!");
+           }
+           else
+           {
+               for(double i =0; i< numbers.Length; i++) {
+                   Console.Write(numbers[i] + " ")
+                   if (i = 0) {
+                        variable = numbers[i]
+                   } else if (i = 1 && numbers.Length = 2) {
+                        Console.WriteLine("The result of multiplying is: " + variable * numbers[i]);
+                   } else {
+                        Console.WriteLine("Invalid parameters entered")
+                   }
+               }
+           }
+           return variable * numbers[i];
         }
 
         public double Divide(params double[] numbers)
