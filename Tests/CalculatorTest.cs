@@ -26,8 +26,8 @@ namespace Tests
         [TestCase(20, 50, 60)]  // will fail
         public void AddTwoPositiveNumbers(int num1, int num2, int expected)
         {
-            calculator = new Calculator();
-            int result = calculator.Add(num1, num2);
+            
+            int result = (int)_calc.Add(num1, num2);
             Assert.AreEqual(expected, result);
         }
 
@@ -38,7 +38,7 @@ namespace Tests
         [TestCase(-20, -50, -60)]  // will fail
         public void AddTwoNegativeNumbers()
         {
-            calculator = new Calculator();
+            
             int result = calculator.Add(num1, num2);
             Assert.AreEqual(expected, result);
         }
