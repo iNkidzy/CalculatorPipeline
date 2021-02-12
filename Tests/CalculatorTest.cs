@@ -1,14 +1,15 @@
 using NUnit.Framework;
-using Services.Calculator;
+using Services;
 
 namespace Tests
 {
     public class Tests
     {
+        private ICalculator _calc ;
         [SetUp]
         public void Setup()
         {
-            Calculator calculator;
+             _calc = new Calculator();
         }
 
         [Test]

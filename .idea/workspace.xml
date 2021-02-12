@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d51cf7a-73ad-4fe9-b7cd-450638218385" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/CalculatorTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/CalculatorTest.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +58,9 @@
       <workItem from="1613129025342" duration="3809000" />
       <workItem from="1613133612619" duration="82000" />
       <workItem from="1613133700571" duration="310000" />
-      <workItem from="1613134046458" duration="6035000" />
+      <workItem from="1613134046458" duration="6160000" />
+      <workItem from="1613142963998" duration="458000" />
+      <workItem from="1613143693800" duration="29000" />
     </task>
     <servers />
   </component>
@@ -77,17 +80,17 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="348" y="109" key="#Plugins" timestamp="1613141890700">
+    <state x="348" y="109" key="#Plugins" timestamp="1613142936086">
       <screen x="57" y="23" width="1383" height="877" />
     </state>
-    <state x="348" y="109" key="#Plugins/57.23.1383.877@57.23.1383.877" timestamp="1613141890700" />
+    <state x="348" y="109" key="#Plugins/57.23.1383.877@57.23.1383.877" timestamp="1613142936086" />
     <state x="213" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613133760396">
       <screen x="57" y="23" width="1383" height="877" />
     </state>
     <state x="213" y="123" key="#com.intellij.execution.impl.EditConfigurationsDialog/57.23.1383.877@57.23.1383.877" timestamp="1613133760396" />
-    <state x="257" y="100" key="SettingsEditor" timestamp="1613134016913">
+    <state x="257" y="100" key="SettingsEditor" timestamp="1613143669395">
       <screen x="57" y="23" width="1383" height="877" />
     </state>
-    <state x="257" y="100" key="SettingsEditor/57.23.1383.877@57.23.1383.877" timestamp="1613134016913" />
+    <state x="257" y="100" key="SettingsEditor/57.23.1383.877@57.23.1383.877" timestamp="1613143669395" />
   </component>
 </project>
