@@ -7,38 +7,60 @@ namespace Tests
         [SetUp]
         public void Setup()
         {
-            // Initialize a shared instance of the calculator service here.
+            Calculator calculator = new Calculator();
         }
 
         [Test]
+        [TestCase()]
         public void AddNumbersWithNoInput()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            //int result = add.Add();
+            //Assert.That(result, Is.EqualTo(throw()));
         }
 
         [Test]
-        public void AddTwoPositiveNumbers()
+        [TestCase(15, 35, 50)]
+        [TestCase(10, 45, 55)]
+        [TestCase(20, 50, 60)]  // will fail
+        public void AddTwoPositiveNumbers(int num1, int num2, int expected)
         {
-            Assert.Inconclusive("Test not fully implemented");
+            int result = calculator.Add(num1, num2);
+            Assert.AreEqual(expected, result);
         }
 
+
         [Test]
+        [TestCase(-15, -35, -50)]
+        [TestCase(-10, -45, -55)]
+        [TestCase(-20, -50, -60)]  // will fail
         public void AddTwoNegativeNumbers()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            int result = calculator.Add(num1, num2);
+            Assert.AreEqual(expected, result);        }
         }
 
+
         [Test]
+        [TestCase(15, 35, 20, 70)]
+        [TestCase(10, 45, 8, 63)]
+        [TestCase(20, 50, 11, 60)]  // will fail
         public void AddThreePositiveNumbers()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            int result = calculator.Add(num1, num2, num3);
+            Assert.AreEqual(expected, result);          }
         }
 
+
         [Test]
+        [TestCase(-15, -35, -20, -70)]
+        [TestCase(-10, -45, -8, -63)]
+        [TestCase(-20, -50, -11 -60)]  // will fail
         public void AddThreeNegativeNumbers()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            int result = calculator.Add(num1, num2, num3);
+            Assert.AreEqual(expected, result);                  }
         }
+
 
         [Test]
         public void SubtractNumbersWithNoInput()
@@ -75,7 +97,7 @@ namespace Tests
         {
             Assert.Inconclusive("Test not fully implemented");
         }
-        
+
         [Test]
         public void MultiplyTwoPositiveNumbers()
         {
@@ -107,51 +129,82 @@ namespace Tests
         }
 
         [Test]
+        [TestCase(30, 15, 2)]
+        [TestCase(110, 2, 55)]
+        [TestCase(20, 50, 60)]  // will fail
         public void DivideTwoPositiveNumbers()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            int result = calculator.Divide(num1, num2);
+            Assert.AreEqual(expected, result);
         }
 
+
         [Test]
+        [TestCase(-30, -15, 2)]
+        [TestCase(-110, -2, 55)]
+        [TestCase(-20, -50, 60)]  // will fail
         public void DivideTwoNegativeNumbers()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            int result = calculator.Divide(num1, num2);
+            Assert.AreEqual(expected, result);
         }
 
+
         [Test]
+        [TestCase(30, 15, 0, 0)] //not sure
+        [TestCase(-110, 55, 0, 0)] //not sure
+        [TestCase(-20, 60, 0, 5)]  // will fail
         public void DivideTwoNumbersWithZero()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            int result = calculator.Divide(num1, num2, num3);
+            Assert.AreEqual(expected, result);
         }
 
+
         [Test]
+        [TestCase(30, 15, 2, 0, 0)] //not sure
+        [TestCase(-110, 55, 0, 0)] //not sure
+        [TestCase(-20, 60, 0, 5)]  // will fail
         public void DivideThreeNumbersWithZero()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            int result = calculator.Divide(num1, num2, num3);
+            Assert.AreEqual(expected, result);
         }
 
+
         [Test]
+        [TestCase(5, 120)]
         public void FactorialOfFive()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            int result = calculator.FactorialOfFive(num1);
+            Assert.AreEqual(expected, result);
         }
 
         [Test]
+        [TestCase(200, 120)]
         public void FactorialOf200()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            int result = calculator.FactorialOf200(num1);
+            Assert.AreEqual(expected, result);
         }
 
+
         [Test]
+        [TestCase(0, 0)]
         public void FactorialOfZero()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            int result = calculator.FactorialOfZero(num1);
+            Assert.AreEqual(expected, result);
         }
 
+
         [Test]
+        [TestCase(-5, -120)]
         public void FactorialOfNegativeNumber()
         {
-            Assert.Inconclusive("Test not fully implemented");
+            int result = calculator.FactorialOfNegativeNumber(num1);
+            Assert.AreEqual(expected, result);
         }
     }
+
 }
