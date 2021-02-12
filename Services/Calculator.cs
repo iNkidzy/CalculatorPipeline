@@ -6,18 +6,19 @@ namespace Services
     public class Calculator : ICalculator
     {
 
+
         public double Add(params double[] numbers)
         {
-            total = 0;
-            if(numbers.Length = 0)
+            double total = 0;
+            if(numbers.Length < 0)
             {
                  Console.WriteLine("Numbers is empty!");
             }
             else
             {
-                for(double i =0; i< numbers.Length; i++) {
-                    Console.Write(numbers[i] + " ");
-                    total += numbers[i];
+                foreach (double num in numbers)
+                {
+                    total += num;
                 }
             }
             return total;
@@ -30,25 +31,33 @@ namespace Services
 
         public double Multiply(params double[] numbers)
         {
-           variable = 2;
-           if(numbers.Length = 0)
-           {
+            double total = 0;
+
+            if (numbers.Length < 0)
+            {
                 Console.WriteLine("Numbers is empty!");
-           }
-           else
-           {
-               for(double i =0; i< numbers.Length; i++) {
-                   Console.Write(numbers[i] + " ");
-                   if (i = 0) {
-                        variable = numbers[i];
-                   } else if (i = 1 && numbers.Length = 2) {
-                        Console.WriteLine("The result of multiplying is: " + variable * numbers[i]);
-                   } else {
-                        Console.WriteLine("Invalid parameters entered");
-                   }
-               }
-           }
-           return variable * numbers[i];
+            }
+            else
+            {
+                //    foreach(int num in numbers)
+                //    {
+                //        total *= num;
+                //    }
+                //     return total;
+                //}
+                //return total;
+
+                for (int i = 0; i < numbers.Length; i++)
+                {
+                    if (numbers[i] == 0)
+                    {
+                        throw new Exception("Cant be divided by 0");
+                    }
+
+                    total = numbers[i] / numbers[i + 1];
+                }
+            }
+            return total;
         }
 
         public double Divide(params double[] numbers)

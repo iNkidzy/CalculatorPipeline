@@ -5,11 +5,10 @@ namespace Tests
 {
     public class Tests
     {
-        private ICalculator _calc ;
         [SetUp]
         public void Setup()
         {
-             _calc = new Calculator();
+            //Calculator calculator = new Calculator();r;
         }
 
         [Test]
@@ -24,10 +23,10 @@ namespace Tests
         [TestCase(15, 35, 50)]
         [TestCase(10, 45, 55)]
         [TestCase(20, 50, 60)]  // will fail
-        public void AddTwoPositiveNumbers(int num1, int num2, int expected)
+        public void AddTwoPositiveNumbers(double num1, double num2, double expected)
         {
-            
-            int result = (int)_calc.Add(num1, num2);
+            Calculator calculator = new Calculator();
+            double result = calculator.Add(num1, num2);
             Assert.AreEqual(expected, result);
         }
 
@@ -36,10 +35,10 @@ namespace Tests
         [TestCase(-15, -35, -50)]
         [TestCase(-10, -45, -55)]
         [TestCase(-20, -50, -60)]  // will fail
-        public void AddTwoNegativeNumbers()
+        public void AddTwoNegativeNumbers(double num1, double num2, double expected)
         {
-            
-            int result = calculator.Add(num1, num2);
+            Calculator calculator = new Calculator();
+            double result = calculator.Add(num1, num2, expected);
             Assert.AreEqual(expected, result);
         }
 
@@ -48,10 +47,10 @@ namespace Tests
         [TestCase(15, 35, 20, 70)]
         [TestCase(10, 45, 8, 63)]
         [TestCase(20, 50, 11, 60)]  // will fail
-        public void AddThreePositiveNumbers()
+        public void AddThreePositiveNumbers(double num1, double num2, double num3, double expected)
         {
-            calculator = new Calculator();
-            int result = calculator.Add(num1, num2, num3);
+            Calculator calculator = new Calculator();
+            double result = calculator.Add(num1, num2, num3);
             Assert.AreEqual(expected, result);
         }
 
@@ -59,11 +58,11 @@ namespace Tests
         [Test]
         [TestCase(-15, -35, -20, -70)]
         [TestCase(-10, -45, -8, -63)]
-        [TestCase(-20, -50, -11 -60)]  // will fail
-        public void AddThreeNegativeNumbers()
+        [TestCase(-20, -50, -11 - 60)]  // will fail
+        public void AddThreeNegativeNumbers(double num1, double num2, double num3, double expected)
         {
-            calculator = new Calculator();
-            int result = calculator.Add(num1, num2, num3);
+            Calculator calculator = new Calculator();
+            double result = calculator.Add(num1, num2, num3);
             Assert.AreEqual(expected, result);
         }
 
@@ -138,10 +137,10 @@ namespace Tests
         [TestCase(30, 15, 2)]
         [TestCase(110, 2, 55)]
         [TestCase(20, 50, 60)]  // will fail
-        public void DivideTwoPositiveNumbers()
+        public void DivideTwoPositiveNumbers(double num1, double num2, double expected)
         {
-            calculator = new Calculator();
-            int result = calculator.Divide(num1, num2);
+            Calculator calculator = new Calculator();
+            double result = calculator.Divide(num1, num2);
             Assert.AreEqual(expected, result);
         }
 
@@ -150,10 +149,10 @@ namespace Tests
         [TestCase(-30, -15, 2)]
         [TestCase(-110, -2, 55)]
         [TestCase(-20, -50, 60)]  // will fail
-        public void DivideTwoNegativeNumbers()
+        public void DivideTwoNegativeNumbers(double num1, double num2, double expected)
         {
-            calculator = new Calculator();
-            int result = calculator.Divide(num1, num2);
+            Calculator calculator = new Calculator();
+            double result = calculator.Divide(num1, num2);
             Assert.AreEqual(expected, result);
         }
 
@@ -162,10 +161,10 @@ namespace Tests
         [TestCase(30, 15, 0, 0)] //not sure
         [TestCase(-110, 55, 0, 0)] //not sure
         [TestCase(-20, 60, 0, 5)]  // will fail
-        public void DivideTwoNumbersWithZero()
+        public void DivideTwoNumbersWithZero(double num1, double num2, double num3, double expected)
         {
-            calculator = new Calculator();
-            int result = calculator.Divide(num1, num2, num3);
+            Calculator calculator = new Calculator();
+            double result = calculator.Divide(num1, num2, num3);
             Assert.AreEqual(expected, result);
         }
 
@@ -174,49 +173,49 @@ namespace Tests
         [TestCase(30, 15, 2, 0, 0)] //not sure
         [TestCase(-110, 55, 0, 0)] //not sure
         [TestCase(-20, 60, 0, 5)]  // will fail
-        public void DivideThreeNumbersWithZero()
+        public void DivideThreeNumbersWithZero(double num1, double num2, double num3, double expected)
         {
-            calculator = new Calculator();
-            int result = calculator.Divide(num1, num2, num3);
+            Calculator calculator = new Calculator();
+            double result = calculator.Divide(num1, num2, num3);
             Assert.AreEqual(expected, result);
         }
 
 
         [Test]
         [TestCase(5, 120)]
-        public void FactorialOfFive()
+        public void FactorialOfFive(double num1, double expected)
         {
-            calculator = new Calculator();
-            int result = calculator.FactorialOfFive(num1);
+            Calculator calculator = new Calculator();
+            double result = calculator.Factorial(num1);
             Assert.AreEqual(expected, result);
         }
 
         [Test]
         [TestCase(200, 120)]
-        public void FactorialOf200()
+        public void FactorialOf200(double num1, double expected)
         {
-            calculator = new Calculator();
-            int result = calculator.FactorialOf200(num1);
+            Calculator calculator = new Calculator();
+            double result = calculator.Factorial(num1);
             Assert.AreEqual(expected, result);
         }
 
 
         [Test]
         [TestCase(0, 0)]
-        public void FactorialOfZero()
+        public void FactorialOfZero(double num1, double expected)
         {
-            calculator = new Calculator();
-            int result = calculator.FactorialOfZero(num1);
+            Calculator calculator = new Calculator();
+            double result = calculator.Factorial(num1);
             Assert.AreEqual(expected, result);
         }
 
 
         [Test]
         [TestCase(-5, -120)]
-        public void FactorialOfNegativeNumber()
+        public void FactorialOfNegativeNumber(double num1, double expected)
         {
-            calculator = new Calculator();
-            int result = calculator.FactorialOfNegativeNumber(num1);
+            Calculator calculator = new Calculator();
+            double result = calculator.Factorial(num1);
             Assert.AreEqual(expected, result);
         }
     }

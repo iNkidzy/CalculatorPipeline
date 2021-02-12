@@ -1,17 +1,21 @@
 ﻿<Properties StartupConfiguration="{1FA6AC0A-46EA-4930-A334-29002C1FFE17}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Tests/CalculatorTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Services/ICalculator.cs">
     <Files>
-      <File FileName="Services/Calculator.cs" Line="1" Column="1" />
-      <File FileName="Tests/CalculatorTest.cs" Line="8" Column="22" />
+      <File FileName="Services/Calculator.cs" Line="22" Column="18" />
+      <File FileName="Tests/CalculatorTest.cs" Line="42" Column="36" />
+      <File FileName="Terminal/Program.cs" Line="1" Column="1" />
+      <File FileName="Services/ICalculator.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CalculatorPipeline" expanded="True">
-            <Node name="Services" expanded="True" />
+            <Node name="Services" expanded="True">
+              <Node name="ICalculator.cs" selected="True" />
+            </Node>
             <Node name="Terminal" expanded="True" />
             <Node name="Tests" expanded="True">
-              <Node name="CalculatorTest.cs" selected="True" />
+              <Node name="Dependencies" expanded="True" />
             </Node>
           </Node>
         </State>
