@@ -54,7 +54,7 @@ namespace Services
                         throw new Exception("Cant be divided by 0");
                     }
 
-                    total = numbers[i] / numbers[i + 1];
+                    total = numbers[i] * numbers[i + 1];
                 }
             }
             return total;
