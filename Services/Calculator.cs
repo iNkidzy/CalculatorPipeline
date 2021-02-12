@@ -40,7 +40,7 @@ namespace Services
                for(double i =0; i< numbers.Length; i++) {
                    Console.Write(numbers[i] + " ");
                    if (i = 0) {
-                        variable = numbers[i]
+                        variable = numbers[i];
                    } else if (i = 1 && numbers.Length = 2) {
                         Console.WriteLine("The result of multiplying is: " + variable * numbers[i]);
                    } else {
