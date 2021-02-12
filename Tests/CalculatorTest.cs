@@ -36,7 +36,7 @@ namespace Tests
         public void AddTwoNegativeNumbers()
         {
             int result = calculator.Add(num1, num2);
-            Assert.AreEqual(expected, result);        }
+            Assert.AreEqual(expected, result);
         }
 
 
@@ -47,7 +47,7 @@ namespace Tests
         public void AddThreePositiveNumbers()
         {
             int result = calculator.Add(num1, num2, num3);
-            Assert.AreEqual(expected, result);          }
+            Assert.AreEqual(expected, result);
         }
 
 
@@ -58,7 +58,7 @@ namespace Tests
         public void AddThreeNegativeNumbers()
         {
             int result = calculator.Add(num1, num2, num3);
-            Assert.AreEqual(expected, result);                  }
+            Assert.AreEqual(expected, result);
         }
 
 
