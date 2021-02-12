@@ -7,7 +7,7 @@ namespace Tests
         [SetUp]
         public void Setup()
         {
-            Calculator calculator = new Calculator();
+            Calculator calculator;
         }
 
         [Test]
@@ -24,6 +24,7 @@ namespace Tests
         [TestCase(20, 50, 60)]  // will fail
         public void AddTwoPositiveNumbers(int num1, int num2, int expected)
         {
+            calculator = new Calculator();
             int result = calculator.Add(num1, num2);
             Assert.AreEqual(expected, result);
         }
@@ -35,6 +36,7 @@ namespace Tests
         [TestCase(-20, -50, -60)]  // will fail
         public void AddTwoNegativeNumbers()
         {
+            calculator = new Calculator();
             int result = calculator.Add(num1, num2);
             Assert.AreEqual(expected, result);
         }
@@ -46,6 +48,7 @@ namespace Tests
         [TestCase(20, 50, 11, 60)]  // will fail
         public void AddThreePositiveNumbers()
         {
+            calculator = new Calculator();
             int result = calculator.Add(num1, num2, num3);
             Assert.AreEqual(expected, result);
         }
@@ -57,6 +60,7 @@ namespace Tests
         [TestCase(-20, -50, -11 -60)]  // will fail
         public void AddThreeNegativeNumbers()
         {
+            calculator = new Calculator();
             int result = calculator.Add(num1, num2, num3);
             Assert.AreEqual(expected, result);
         }
@@ -134,6 +138,7 @@ namespace Tests
         [TestCase(20, 50, 60)]  // will fail
         public void DivideTwoPositiveNumbers()
         {
+            calculator = new Calculator();
             int result = calculator.Divide(num1, num2);
             Assert.AreEqual(expected, result);
         }
@@ -145,6 +150,7 @@ namespace Tests
         [TestCase(-20, -50, 60)]  // will fail
         public void DivideTwoNegativeNumbers()
         {
+            calculator = new Calculator();
             int result = calculator.Divide(num1, num2);
             Assert.AreEqual(expected, result);
         }
@@ -156,6 +162,7 @@ namespace Tests
         [TestCase(-20, 60, 0, 5)]  // will fail
         public void DivideTwoNumbersWithZero()
         {
+            calculator = new Calculator();
             int result = calculator.Divide(num1, num2, num3);
             Assert.AreEqual(expected, result);
         }
@@ -167,6 +174,7 @@ namespace Tests
         [TestCase(-20, 60, 0, 5)]  // will fail
         public void DivideThreeNumbersWithZero()
         {
+            calculator = new Calculator();
             int result = calculator.Divide(num1, num2, num3);
             Assert.AreEqual(expected, result);
         }
@@ -176,6 +184,7 @@ namespace Tests
         [TestCase(5, 120)]
         public void FactorialOfFive()
         {
+            calculator = new Calculator();
             int result = calculator.FactorialOfFive(num1);
             Assert.AreEqual(expected, result);
         }
@@ -184,6 +193,7 @@ namespace Tests
         [TestCase(200, 120)]
         public void FactorialOf200()
         {
+            calculator = new Calculator();
             int result = calculator.FactorialOf200(num1);
             Assert.AreEqual(expected, result);
         }
@@ -193,6 +203,7 @@ namespace Tests
         [TestCase(0, 0)]
         public void FactorialOfZero()
         {
+            calculator = new Calculator();
             int result = calculator.FactorialOfZero(num1);
             Assert.AreEqual(expected, result);
         }
@@ -202,6 +213,7 @@ namespace Tests
         [TestCase(-5, -120)]
         public void FactorialOfNegativeNumber()
         {
+            calculator = new Calculator();
             int result = calculator.FactorialOfNegativeNumber(num1);
             Assert.AreEqual(expected, result);
         }
