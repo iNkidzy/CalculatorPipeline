@@ -12,6 +12,7 @@ pipeline {
       }
       stage("Test") {
         steps {
+              sh "dotnet build Tests.csproj"
               unstable    "Test phase not implemented"
         }
       }
