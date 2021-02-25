@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using Services;
 
@@ -15,14 +16,15 @@ namespace Tests
         [TestCase()]
         public void AddNumbersWithNoInput()
         {
-            //int result = add.Add();
-            //Assert.That(result, Is.EqualTo(throw()));
+            Calculator calculator = new Calculator();
+            double result = calculator.Add();
+            Assert.Throws<ArgumentOutOfRangeException>;
+            //Assert.That(result, Is.EqualTo(ArgumentOutOfRangeException));
         }
 
         [Test]
         [TestCase(15, 35, 50)]
         [TestCase(10, 45, 55)]
-        [TestCase(20, 50, 60)]  // will fail
         public void AddTwoPositiveNumbers(double num1, double num2, double expected)
         {
             Calculator calculator = new Calculator();
@@ -34,7 +36,6 @@ namespace Tests
         [Test]
         [TestCase(-15, -35, -50)]
         [TestCase(-10, -45, -55)]
-        [TestCase(-20, -50, -60)]  // will fail
         public void AddTwoNegativeNumbers(double num1, double num2, double expected)
         {
             Calculator calculator = new Calculator();
@@ -46,7 +47,6 @@ namespace Tests
         [Test]
         [TestCase(15, 35, 20, 70)]
         [TestCase(10, 45, 8, 63)]
-        [TestCase(20, 50, 11, 60)]  // will fail
         public void AddThreePositiveNumbers(double num1, double num2, double num3, double expected)
         {
             Calculator calculator = new Calculator();
@@ -58,7 +58,6 @@ namespace Tests
         [Test]
         [TestCase(-15, -35, -20, -70)]
         [TestCase(-10, -45, -8, -63)]
-        [TestCase(-20, -50, -11 - 60)]  // will fail
         public void AddThreeNegativeNumbers(double num1, double num2, double num3, double expected)
         {
             Calculator calculator = new Calculator();
@@ -136,7 +135,6 @@ namespace Tests
         [Test]
         [TestCase(30, 15, 2)]
         [TestCase(110, 2, 55)]
-        [TestCase(20, 50, 60)]  // will fail
         public void DivideTwoPositiveNumbers(double num1, double num2, double expected)
         {
             Calculator calculator = new Calculator();
@@ -148,7 +146,6 @@ namespace Tests
         [Test]
         [TestCase(-30, -15, 2)]
         [TestCase(-110, -2, 55)]
-        [TestCase(-20, -50, 60)]  // will fail
         public void DivideTwoNegativeNumbers(double num1, double num2, double expected)
         {
             Calculator calculator = new Calculator();
@@ -160,7 +157,6 @@ namespace Tests
         [Test]
         [TestCase(30, 15, 0, 0)] //not sure
         [TestCase(-110, 55, 0, 0)] //not sure
-        [TestCase(-20, 60, 0, 5)]  // will fail
         public void DivideTwoNumbersWithZero(double num1, double num2, double num3, double expected)
         {
             Calculator calculator = new Calculator();
@@ -172,7 +168,6 @@ namespace Tests
         [Test]
         [TestCase(30, 15, 2, 0, 0)] //not sure
         [TestCase(-110, 55, 0, 0)] //not sure
-        [TestCase(-20, 60, 0, 5)]  // will fail
         public void DivideThreeNumbersWithZero(double num1, double num2, double num3, double expected)
         {
             Calculator calculator = new Calculator();
