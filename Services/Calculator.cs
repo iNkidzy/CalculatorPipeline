@@ -12,7 +12,7 @@ namespace Services
             double total = 0;
             if(numbers.Length < 0)
             {
-                 Console.WriteLine("Numbers is empty!");
+                throw new ArgumentOutOfRangeException("Number is empty!");
             }
             else
             {
@@ -35,18 +35,10 @@ namespace Services
 
             if (numbers.Length < 0)
             {
-                Console.WriteLine("Numbers is empty!");
+                throw new ArgumentOutOfRangeException("Number is empty!");
             }
             else
-            {
-                //    foreach(int num in numbers)
-                //    {
-                //        total *= num;
-                //    }
-                //     return total;
-                //}
-                //return total;
-
+            { 
                 for (int i = 0; i < numbers.Length; i++)
                 {
                     if (numbers[i] == 0)
